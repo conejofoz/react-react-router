@@ -1,5 +1,13 @@
 export const About = ()=>{
     return (
-        <div>ABOUT</div>
+        <div>
+            ABOUT
+            <hr />
+            <ul>
+                <li>João</li>
+                <li>Juanito</li>
+            </ul>
+
+        </div>
     )
 }
