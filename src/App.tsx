@@ -4,6 +4,8 @@ import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { AboutItem } from './pages/AboutItem';
 import { NotFound } from './pages/NotFound';
+import { RequireAuth } from './auth/RequireAuth';
+import { Login } from './pages/Login';
 
 const App = ()=>{
   return (
@@ -15,8 +17,9 @@ const App = ()=>{
       <div className="py-4">
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/sobre' element={<About />} />
+          <Route path='/sobre' element={<RequireAuth><About /></RequireAuth>} />
           <Route path='/sobre/:slug' element={<AboutItem />} />
+          <Route path='/login' element={<Login />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </div>
